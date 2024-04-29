@@ -12,7 +12,7 @@ const resetIdSequence = async () => {
   try {
     const todoCount = await pool.query("SELECT COUNT(*) FROM todo");
     if (todoCount.rows[0].count === "0") {
-      await pool.query("ALTER SEQUENCE todo_id RESTART WITH 1"); // Adjust 'todo_id_seq' if your sequence name is different
+      await pool.query("ALTER SEQUENCE todo_id RESTART"); // Adjust 'todo_id
       console.log("ID sequence reset to 1");
     }
   } catch (err) {

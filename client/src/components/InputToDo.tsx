@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import { useState } from "react";
 
 const InputTodo = () => {
   const [description, setDescription] = useState("");
@@ -22,9 +22,9 @@ const InputTodo = () => {
   };
 
   return (
-    <Fragment>
-      <div className="container text-center mb-3 font-weight-bold">
-        <h2>My Todo List</h2>
+    <>
+      <div className="container text-center mb-3 font-semibold">
+        <h2 className="text-xl">Todo List</h2>
       </div>
       <hr />
 
@@ -36,7 +36,7 @@ const InputTodo = () => {
               type="text"
               name="to-do"
               className="input-field form-control"
-              placeholder="Enter a todo..."
+              placeholder="Enter a task..."
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               required
@@ -48,7 +48,7 @@ const InputTodo = () => {
           </div>
         </div>
       </form>
-    </Fragment>
+    </>
   );
 };
 

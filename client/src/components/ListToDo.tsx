@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import EditToDo from "./EditToDo";
 
 const ListTodo = () => {
@@ -37,7 +37,7 @@ const ListTodo = () => {
   }, []);
 
   return (
-    <Fragment>
+    <>
       <hr />
       <table id="todos">
         <colgroup>
@@ -65,7 +65,7 @@ const ListTodo = () => {
           ))}
         </tbody>
       </table>
-    </Fragment>
+    </>
   );
 };
 

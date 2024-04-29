@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import { useState } from "react";
 
 const EditToDo = ({ todo }) => {
   const [description, setDescription] = useState(todo.description);
@@ -26,13 +26,13 @@ const EditToDo = ({ todo }) => {
   };
 
   return (
-    <Fragment>
+    <>
       <button
         style={{ color: "white" }}
         type="button"
         className="btn btn-warning btn-sm"
-        data-toggle="modal"
-        data-target={`#id${todo.todo_id}`}
+        data-bs-toggle="modal"
+        data-bs-target={`#id${todo.todo_id}`}
       >
         Edit
       </button>
@@ -49,7 +49,7 @@ const EditToDo = ({ todo }) => {
               <button
                 type="button"
                 className="close"
-                data-dismiss="modal"
+                data-bs-dismiss="modal"
                 onClick={() => setDescription(todo.description)}
               >
                 &times;
@@ -68,8 +68,8 @@ const EditToDo = ({ todo }) => {
             <div className="modal-footer">
               <button
                 type="button"
-                className="btn btn-warning btn-sm"
-                data-dismiss="modal"
+                className="btn btn-warning btn-sm "
+                data-bs-dismiss="modal"
                 onClick={(e) => updateDescription(e)}
               >
                 Edit
@@ -77,7 +77,7 @@ const EditToDo = ({ todo }) => {
               <button
                 type="button"
                 className="btn btn-danger btn-sm"
-                data-dismiss="modal"
+                data-bs-dismiss="modal"
                 onClick={() => setDescription(todo.description)}
               >
                 Close
@@ -86,7 +86,7 @@ const EditToDo = ({ todo }) => {
           </div>
         </div>
       </div>
-    </Fragment>
+    </>
   );
 };
 

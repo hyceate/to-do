@@ -9,7 +9,7 @@ function App() {
     <>
        <div id="top-level-div" className="h-100">
         <InputToDo />
-        <h3 style={{ margin: "0%", marginTop: "40px" }}>Tasks</h3>
+        <h3 className="mt-10 mb-3 text-lg font-semibold lowercase">Tasks</h3>
         <div table="todo-table-div">
           <ListToDo />
           <hr color="grey" />

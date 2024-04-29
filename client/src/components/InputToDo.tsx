@@ -2,10 +2,8 @@ import { useState } from "react";
 
 const InputTodo = () => {
   const [description, setDescription] = useState("");
-
   const onSubmitForm = async (e) => {
     e.preventDefault();
-
     try {
       const url = "http://localhost:4000/todos";
       const body = { description };
@@ -14,17 +12,15 @@ const InputTodo = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
-
       window.location = "/";
     } catch (err) {
       console.error(err.message);
     }
   };
-
   return (
     <>
-      <div className="container text-center mb-3 font-semibold">
-        <h2 className="text-xl">Todo List</h2>
+      <div className="container text-center mb-3 ">
+        <h2 className="text-xl font-bold uppercase">Todo List</h2>
       </div>
       <hr />
 

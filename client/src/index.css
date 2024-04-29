@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#top-level-div {
+  margin: 2rem;
+}
+
+.input-field-parent {
+  background-color: rgb(237, 237, 237);
+  padding: 20px;
+  border-radius: 2px;
+}
+
+.add-btn {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.edit-btn {
+  background-color: orange;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+.input-field {
+  width: 100%;
+}
+
+#top-level-div {
+  margin: 2rem;
+}
+
+#todos {
+  border: 1px solid rgba(162, 221, 162, 0.486);
+  border-radius: 2px;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: rgba(162, 221, 162, 0.486);
+}
+
+#todos tr,
+td {
+  border-bottom: 1px solid rgba(199, 194, 194, 0.291);
+  padding: 10px;
+}
+
+#todos tr:hover {
+  background-color: rgba(162, 227, 162, 0.486);
+}
+
+#todos .td-btns {
+  text-align: right;
+}
+
+hr {
+  background-color: rgb(235, 226, 226);
+  height: 1px;
+  border: 0;
+}
